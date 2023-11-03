@@ -2,7 +2,7 @@
 
 Este projeto faz parte do desafio da disciplina de visualização de dados.
 
-O objetivo deste dashboard é analisar os dados deste repositório [link](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset). Com isso, vamos extrair métricas e estruturar o painel para responder algumas KPIs (<i>Key Performance Indicators</i>), a, b, c e d.
+O objetivo deste dashboard é analisar os dados deste repositório [link](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset). Com isso, vamos extrair métricas e estruturar o painel para responder algumas KPIs (<i>Key Performance Indicators</i>): Qual o período do ano há mais vendas e qual melhor momento para investir na empresa?; Finais de semana impactam possitivamente nas vendas ?; O que a empresa pode fazer para reter novos clientes?
 
 ## Tecnologias
 
