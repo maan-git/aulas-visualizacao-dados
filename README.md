@@ -6,6 +6,10 @@ O objetivo deste dashboard é analisar os dados deste repositório [link](https:
 
 ## Tecnologias
 
+### Passo a passo configuração do Github
+
+Para fazer o clone do projeto e utilizar o git bash, basta acessar este tutorial [link](https://phoenixnap.com/kb/git-clone-ssh).
+
 ### Plotly
 
 Plotly é um framework de código aberto que posibilita a criação de gráficos interativos e também uma infraestrutura para disponibilizar o dashboard em servidores web através do Dash. 
