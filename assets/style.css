@@ -51,6 +51,21 @@ body {
     font-size: 22px;
 }
 
+.card-45{
+    width: 520px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+    background-color: #FFFFFF;
+    padding: 0 15px;
+    display: flexbox;
+}
+
+.card-45 p{
+    padding: 15px 0 0 10px;
+    font-size: 22px;
+}
+
+
 .table {
     margin-bottom: 14px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);

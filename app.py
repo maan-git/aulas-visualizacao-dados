@@ -46,7 +46,7 @@ app.layout = html.Div(
                             ]
                         ),
                         dash_table.DataTable(
-                            id="a",
+                            id="table-with-some-data",
                             data=Controller.get_grid_data(),
                             page_size=15,
                         ),
@@ -111,6 +111,70 @@ app.layout = html.Div(
                     ],
                     className="card",
                 ),
+                #Gráfico de pizza de Bounce Rate
+                html.Div(
+                    [
+                        html.Div(
+                            children=[
+                                html.P("Taxa de Rejeição"),
+                                html.Hr(),
+                            ]
+                        ),
+                        dcc.Graph(
+                            id="pie-plot-bounce-rate",
+                            figure=Controller.get_pie_plot("BounceRates"),
+                        ),
+                    ],
+                    className="card-45"
+                ),
+                #Gráfico de pizza de Exit Rate
+                html.Div(
+                    [
+                        html.Div(
+                            children=[
+                                html.P("Taxa de Saída da Página"),
+                                html.Hr(),
+                            ]
+                        ),
+                        dcc.Graph(
+                            id="pie-plot-exit-rate",
+                            figure=Controller.get_pie_plot("ExitRates"),
+                        ),
+                    ],
+                    className="card-45"
+                ),
+                #Gráfico de pizza de Page Exist
+                html.Div(
+                    [
+                        html.Div(
+                            children=[
+                                html.P("Quantidade de Saída da Página"),
+                                html.Hr(),
+                            ]
+                        ),
+                        dcc.Graph(
+                            id="pie-plot-page-exits",
+                            figure=Controller.get_pie_plot("PageValues"),
+                        ),
+                    ],
+                    className="card"
+                ),
+                #Série temporal 
+                html.Div(
+                    [
+                        html.Div(
+                            children=[
+                                html.P("Distribuição dos dados no tempo"),
+                                html.Hr(),
+                            ]
+                        ),
+                        dcc.Graph(
+                            id="time-series-data",
+                            figure=Controller.time_series_plot(),
+                        ),
+                    ],
+                    className="card"
+                )
             ],
             className="wrapper",
         ),

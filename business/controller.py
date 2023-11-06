@@ -27,7 +27,12 @@ class Controller:
         Revenue
     """
 
-    df = pd.read_csv("data/online_shoppers_intention.csv").sort_values(by="Region")
+    #
+
+    df = pd.read_csv("data/online_shoppers_intention_date_formated.csv").sort_values(
+        by="Region"
+    )
+    df["Month_Date"] = pd.to_datetime(df["Month_Date"])
     df_nums = df.drop(columns=["Month", "VisitorType"])
 
     @classmethod
@@ -85,4 +90,23 @@ class Controller:
         dt_res = px.histogram(
             cls.df_nums, x=col_chosen, color="Revenue", barmode="group"
         ).update_layout(xaxis_title="Campos", yaxis_title="Valor de correlação")
+        return dt_res
+
+    @classmethod
+    def get_pie_plot(cls, column):
+        dt_res = px.pie(cls.df, values=column, names="Revenue")
+        return dt_res
+
+    @classmethod
+    def time_series_plot(cls, column="Administrative_Duration"):
+        dt_res = px.bar(
+            cls.df,
+            x="Month_Date",
+            y=[
+                "Administrative_Duration",
+                "Informational_Duration",
+                "ProductRelated_Duration",
+            ],
+            barmode="group",
+        ).update_layout(xaxis_title="Data", yaxis_title="Valores")
         return dt_res
