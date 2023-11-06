@@ -125,7 +125,7 @@ app.layout = html.Div(
                             figure=Controller.get_pie_plot("BounceRates"),
                         ),
                     ],
-                    className="card-45"
+                    className="card"
                 ),
                 #Gráfico de pizza de Exit Rate
                 html.Div(
@@ -141,7 +141,7 @@ app.layout = html.Div(
                             figure=Controller.get_pie_plot("ExitRates"),
                         ),
                     ],
-                    className="card-45"
+                    className="card"
                 ),
                 #Gráfico de pizza de Page Exist
                 html.Div(
